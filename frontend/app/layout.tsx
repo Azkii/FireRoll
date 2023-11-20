@@ -9,6 +9,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <title>Fire roll</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta name="description" content="Play RPG online with friends" />
+      </head>
       <body className={GeistSans.className}>
         <Providers>{children}</Providers>
       </body>

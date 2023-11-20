@@ -5,7 +5,7 @@ import { ROUTES } from "@utils/constants/routes";
 export default function Login() {
   return (
     <>
-      <h1 className="text-4xl mb-2">Fire Roll</h1>
+      <h1 className="text-4xl mb-2">Fire roll</h1>
       <div className={styles.action}>
         <Input radius="sm" type="email" label="Email" variant="bordered" />
         <div className="mb-1">
