@@ -1,17 +1,21 @@
-import { Providers } from "../providers";
-import { GeistSans } from "geist/font/sans";
-import "@utils/globals.css";
+import Image from "next/image";
+import styles from "./styles.module.css";
 
-export default function RootLayout({
+export default function AuthLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className={GeistSans.className}>
-        <Providers>{children}</Providers>
-      </body>
-    </html>
+    <section className={styles.wrapper}>
+      <Image
+        src={"/logo.svg"}
+        width={120}
+        height={120}
+        alt={"FireRoll logo"}
+        priority
+      />
+      {children}
+    </section>
   );
 }
