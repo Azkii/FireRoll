@@ -7,20 +7,13 @@ export default function Login() {
     <>
       <h1 className="text-4xl mb-2">Fire Roll</h1>
       <div className={styles.action}>
-        <Input
-          radius="sm"
-          type="email"
-          label="Email"
-          variant="bordered"
-          placeholder="Enter your email"
-        />
+        <Input radius="sm" type="email" label="Email" variant="bordered" />
         <div className="mb-1">
           <Input
             radius="sm"
             type="password"
             label="Password"
             variant="bordered"
-            placeholder="Enter your password"
           />
           <Link
             className="mt-1"

@@ -11,13 +11,7 @@ export default function Login() {
         a link to reset your password.
       </p>
       <div className={styles.action}>
-        <Input
-          radius="sm"
-          type="email"
-          label="Email"
-          variant="bordered"
-          placeholder="Enter your email"
-        />
+        <Input radius="sm" type="email" label="Email" variant="bordered" />
         <Button radius="sm">Reset password</Button>
       </div>
       <p className="text-small">
