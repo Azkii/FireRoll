@@ -1,7 +1,18 @@
 .wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   height: 100%;
+  gap: 20px;
+
+  max-width: 420px;
+  padding: 8px;
+  margin: auto;
+}
+
+.action {
+  display: grid;
+  gap: 14px;
+  width: 100%;
 }
