@@ -59,19 +59,19 @@ export default function HomeLayout({
                     <p>Online</p>
                   </div>
                 </DropdownItem>
-                <DropdownItem key="status-online">
+                <DropdownItem key="status-away">
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-warning" />
                     <p>Away</p>
                   </div>
                 </DropdownItem>
-                <DropdownItem key="status-online">
+                <DropdownItem key="status-busy">
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-danger" />
                     <p>Busy</p>
                   </div>
                 </DropdownItem>
-                <DropdownItem key="status-online">
+                <DropdownItem key="status-appear-offline">
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-default" />
                     <p>Appear Offline</p>
@@ -83,7 +83,7 @@ export default function HomeLayout({
                 <DropdownItem key="account-settings" href="/account-settings">
                   Account settings
                 </DropdownItem>
-                <DropdownItem key="helpAndFeedback">
+                <DropdownItem key="help-and-feedback">
                   Help & Feedback
                 </DropdownItem>
               </DropdownSection>
