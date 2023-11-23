@@ -1,5 +1,5 @@
+import UserMenu from "@components/UserMenu";
 import Image from "next/image";
-import UserMenu from "../../components/ui-components/UserMenu";
 
 export default function HomeLayout({
   children,
