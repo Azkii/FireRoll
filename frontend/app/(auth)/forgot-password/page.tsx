@@ -7,8 +7,8 @@ export default function Login() {
     <>
       <h1 className="text-4xl">Reset Password</h1>
       <p className=" mb-2 text-center text-default-400">
-        Enter the email address associated with your account and we'll send you
-        a link to reset your password.
+        Enter the email address associated with your account and we&apos;ll send
+        you a link to reset your password.
       </p>
       <div className={styles.action}>
         <Input radius="sm" type="email" label="Email" variant="bordered" />
