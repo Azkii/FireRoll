@@ -9,26 +9,29 @@ import {
   Badge,
   DropdownSection,
 } from "@nextui-org/react";
+import { User } from "@utils/db";
 
-const UserMenu = () => {
+interface Props {
+  user: User;
+}
+
+const UserMenu = ({ user }: Props) => {
   return (
     <Dropdown placement="bottom-end">
       <DropdownTrigger>
         <div className="cursor-pointer">
           <Badge content="" color="success" size="md" placement="bottom-right">
-            <Avatar
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Calico_tabby_cat_-_Savannah.jpg/1200px-Calico_tabby_cat_-_Savannah.jpg"
-              name="Next"
-            />
+            <Avatar src={user.icon} name={user.name} />
           </Badge>
         </div>
       </DropdownTrigger>
       <DropdownMenu aria-label="Profile Actions" variant="flat">
         <DropdownItem key="profile" className="h-14 gap-2">
           <p className="font-semibold text-base">
-            <span className="text-primary">Next</span> #666
+            <span className="text-primary">{user.name}</span>{" "}
+            <span>{user.tag}</span>
           </p>
-          <p className="font-semibold text-xs">zoey@example.com</p>
+          <p className="font-semibold text-xs">{user.email}</p>
         </DropdownItem>
         <DropdownSection title="Status">
           <DropdownItem key="status-online">
