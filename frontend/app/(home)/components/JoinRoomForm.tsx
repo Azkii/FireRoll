@@ -2,6 +2,8 @@
 import { Button, Input } from "@nextui-org/react";
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { joinRoomFormSchema } from "./schema";
 
 export const JoinRoomForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -9,8 +11,10 @@ export const JoinRoomForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid },
-  } = useForm<{ code: string }>();
+    formState: { errors },
+  } = useForm<{ code: string }>({
+    resolver: zodResolver(joinRoomFormSchema),
+  });
   const onSubmit: SubmitHandler<{ code: string }> = (data) => {
     console.log(data);
     setIsSubmitting(true);
@@ -19,7 +23,7 @@ export const JoinRoomForm = () => {
   return (
     <form className="flex gap-2" onSubmit={handleSubmit(onSubmit)}>
       <Input
-        {...(register("code"), { required: true, minLength: 4 })}
+        {...register("code")}
         size="lg"
         radius="sm"
         type="text"
