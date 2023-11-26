@@ -4,9 +4,11 @@ import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { joinRoomFormSchema } from "./schema";
+import { useRouter } from "next/navigation";
 
 export const JoinRoomForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const router = useRouter();
 
   const {
     register,
@@ -15,9 +17,9 @@ export const JoinRoomForm = () => {
   } = useForm<{ code: string }>({
     resolver: zodResolver(joinRoomFormSchema),
   });
-  const onSubmit: SubmitHandler<{ code: string }> = (data) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<{ code: string }> = ({ code }) => {
     setIsSubmitting(true);
+    router.push(`/games/${code}`);
   };
 
   return (
