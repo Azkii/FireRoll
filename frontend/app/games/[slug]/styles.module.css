@@ -1,0 +1,17 @@
+.game {
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: grid;
+}
+
+.field {
+  aspect-ratio: 1/1;
+  display: grid;
+  place-items: center;
+  border: solid 1px gray;
+}
